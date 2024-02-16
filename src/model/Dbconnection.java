@@ -1,14 +1,15 @@
 package model;
-
 import java.sql.*;
-public class Dbconnection {
-    private static final String JDBC_URL="jdbc:mysql://localhost:3306/grocerymart";
-    private static  final String USERNAME="root";
-    private static final String PASSWORD="Divya29*";
-    public static Connection getConnetcion(){
+public class DBConnection {
+    private static final String URL="jdbc:mysql://localhost:3306/grocerymart";
+    private static final String root="root";
+    private static final String password="Divya29*";
+    public static Connection getConnection()throws Exception{
         try{
-            return DriverManager.getConnection(JDBC_URL,USERNAME,PASSWORD);
-        }catch(SQLException e){
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(URL,root,password);
+        }
+        catch(Exception e){
             e.printStackTrace();
             return null;
         }
