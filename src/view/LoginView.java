@@ -11,8 +11,8 @@ public class LoginView {
         LoginController login=new LoginController();
         int flag=login.checkUser(email,password);
         if(flag==1){
-            //dealerView.viewJobSeekers();
             System.out.print("Login Successfully");
+            dealerView.viewProducts();
         }
         else if(flag==2){
             //dealerView.viewJobProviders();

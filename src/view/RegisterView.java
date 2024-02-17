@@ -15,18 +15,18 @@ public class RegisterView {
         System.out.println("1.User  ||  2.Dealer");
         String role=in.nextLine();
         boolean flag=false;
-        if(role.equalsIgnoreCase("user")){
+        if(role.equalsIgnoreCase("dealer")){
             System.out.print("Mobile Number:");
             String mobileNumber=in.nextLine();
             System.out.print("Address:");
             String address=in.nextLine();
             flag=register.registerUser(username,email,password,role,mobileNumber,address);
         }
-        else if(role.equalsIgnoreCase("Dealer")){
+        /*else if(role.equalsIgnoreCase("Dealer")){
             System.out.println("Contact Number:");
             String contactNumber=in.nextLine();
             flag=register.registerUser(username,email,password,role,contactNumber);
-        }
+        }*/
         if(flag){
             LoginView.viewLogin();
         }
