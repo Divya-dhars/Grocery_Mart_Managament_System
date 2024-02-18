@@ -1,6 +1,7 @@
 package model;
 import java.sql.*;
-class UserModel{
+import java.util.List;
+class User{
     protected Connection con=null;
     protected PreparedStatement pst1=null,pst2=null;
     DBConnection db=new DBConnection();
@@ -13,7 +14,7 @@ class UserModel{
         return rs.next();
     }
 }
-public class RegisterModel extends UserModel{
+public class RegisterModel extends User{
     @SuppressWarnings("static-access")
     public boolean registerUser(String username, String email, String password, String role,String contactNumber,String address) throws Exception{
         con=db.getConnection();

@@ -2,6 +2,7 @@ package view;
 import java.util.*;
 import controller.LoginController;
 public class LoginView {
+    @SuppressWarnings("static-access")
     public static void viewLogin()throws Exception{
         Scanner in=new Scanner(System.in);
         System.out.print("Email:");
@@ -12,13 +13,13 @@ public class LoginView {
         int flag=login.checkUser(email,password);
         if(flag==1){
             System.out.print("Login Successfully");
-            dealerView.viewProducts();
+            UserView.viewProducts(email);
         }
         else if(flag==2){
-            //dealerView.viewJobProviders();
+            //dealerView.viewJobProducts();
         }
         else if(flag==3){
-           // dealerView.viewAdmin();
+           //AdminView.viewProducts();
         }
         else{
             System.out.println("Invalid Username or Password");
