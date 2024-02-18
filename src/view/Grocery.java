@@ -11,6 +11,7 @@ public class Grocery{
             System.out.println("                                      2.Register                                     ");
             System.out.println("                                      3.Exit                                         ");
             int choice=s.nextInt();
+            s.nextLine();
             switch(choice){
                 case 1:
                     LoginView.viewLogin();

@@ -14,7 +14,7 @@ public class UserView {
         System.out.println("\t     3.Enter 3 to buy the product directly              ");
         System.out.println("\t     4.Enter 4 to view the Order history                ");
         System.out.println("\t     5.Enter 5 to view the Cart history                 ");
-        System.out.println("\t     6.Enter 5 to Exit                                  ");
+        System.out.println("\t     6.Enter 6 to Exit                                  ");
         System.out.println("\t     Enter the option                                   ");
         System.out.println("**********************************************************");
         int ch=s.nextInt();

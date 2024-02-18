@@ -16,10 +16,10 @@ public class LoginView {
             UserView.viewProducts(email);
         }
         else if(flag==2){
-            //dealerView.viewJobProducts();
+            dealerView.viewProducts();
         }
         else if(flag==3){
-           //AdminView.viewProducts();
+           AdminView.displayProduct();
         }
         else{
             System.out.println("Invalid Username or Password");
