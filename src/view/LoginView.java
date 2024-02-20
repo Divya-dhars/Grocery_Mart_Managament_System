@@ -2,7 +2,6 @@ package view;
 import java.util.*;
 import controller.LoginController;
 public class LoginView {
-    @SuppressWarnings("static-access")
     public static void viewLogin()throws Exception{
         Scanner in=new Scanner(System.in);
         System.out.print("Email:");

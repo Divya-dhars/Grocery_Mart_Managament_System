@@ -20,6 +20,15 @@ public class RegisterView {
             String mobileNumber=in.nextLine();
             System.out.print("Address:");
             String address=in.nextLine();
+            System.out.println("Product name:");
+            String product=in.nextLine();
+            flag=register.registerUser(username,email,password,role,mobileNumber,address,product);
+        }
+        else if(role.equalsIgnoreCase("user")){
+            System.out.print("Mobile Number:");
+            String mobileNumber=in.nextLine();
+            System.out.print("Address:");
+            String address=in.nextLine();
             flag=register.registerUser(username,email,password,role,mobileNumber,address);
         }
         /*else if(role.equalsIgnoreCase("Dealer")){

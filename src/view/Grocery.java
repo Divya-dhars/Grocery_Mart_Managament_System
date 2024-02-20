@@ -1,18 +1,19 @@
 package view;
 import java.util.*;
-public class Grocery{
-    public static void main(String[] args) throws Exception{
+
+public class Grocery {
+    public static void main(String[] args) throws Exception {
         Scanner s=new Scanner(System.in);
-        int i=1;
+        int i =1;
         System.out.println("\n\t----------------------------------Welcome to G-Mart--------------------------------\n");
         System.out.println();
-        while(i==1){
+        while (i==1) {
             System.out.println("                                      1.Login                                        ");
             System.out.println("                                      2.Register                                     ");
             System.out.println("                                      3.Exit                                         ");
             int choice=s.nextInt();
             s.nextLine();
-            switch(choice){
+            switch (choice) {
                 case 1:
                     LoginView.viewLogin();
                     break;

@@ -1,5 +1,4 @@
 package controller;
-
 import java.util.*;
 import model.AdminModel;
 public class AdminController {
@@ -19,10 +18,16 @@ public class AdminController {
     public List<String> displayProducts(){
         return model.displayProducts();
     }
+    public List<String> displayProductsLess(){
+        return model.displayProducts();
+    }
     public List<String> displayDealer(){
         return model.displayDealer();
     }
     public List<String> orderHistory(){
         return model.orderHistory();
+    }
+    public boolean addStocks(String productId)throws Exception{
+        return model.addStock(productId);
     }
 }
