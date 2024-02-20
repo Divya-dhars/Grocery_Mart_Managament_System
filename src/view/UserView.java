@@ -47,15 +47,15 @@ public class UserView {
                     break;
                 case 3:
                     System.out.println("Enter product id to buy the product");
-                    int id1=s.nextInt();
-                    s.nextLine();
+                    String id1=s.nextLine();
                     System.out.println("Enter quantity you want");
                     String quan=s.nextLine();
-                    String amounttoPay=controller.displayTotAmount(email);
-                    System.out.println("Total amount to pay " + amounttoPay);
+                    String amounttoPay=controller.displayAmount(id1);
+                    int pay=Integer.parseInt(amounttoPay)*Integer.parseInt(quan);
+                    System.out.println("Total amount to pay " + pay);
                     System.out.print("Enter the amount ");
                     String userAmountpay=s.nextLine();
-                    if(controller.buyProduct(id1,quan,email) && amounttoPay.equals(userAmountpay)){ 
+                    if(controller.buyProduct(id1,quan,email) && String.valueOf(pay).equals(userAmountpay)){ 
                         System.out.println("Order Placed");
                     }else{
                         System.out.println("Order Not Placed");

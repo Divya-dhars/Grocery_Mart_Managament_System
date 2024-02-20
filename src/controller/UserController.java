@@ -9,7 +9,7 @@ public class UserController{
     public boolean addToCart(int id,String q,String email) {
         return model.addToCart(id,q,email);
     }
-    public boolean buyProduct(int id1,String quan,String email){
+    public boolean buyProduct(String id1,String quan,String email){
         return model.buyProduct(id1,quan,email);
    }
    public List<String> viewHistory(String email){
@@ -20,6 +20,9 @@ public class UserController{
    }
    public String displayTotAmount(String email){
     return model.displayTotAmount(email);
+   }
+   public String displayAmount(String id){
+    return model.displayAmount(id);
    }
    public boolean storeOrderDetails(int id2,String quan1,String email){
     return model.storeOrderDetails(id2,quan1,email);

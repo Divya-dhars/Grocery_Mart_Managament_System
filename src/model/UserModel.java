@@ -49,7 +49,7 @@ public class UserModel {
        }
        return false;
     }
-    public boolean buyProduct(int id1,String quan,String email) {
+    public boolean buyProduct(String id1,String quan,String email) {
         try{
             con=DBConnection.getConnection();
             String query="select name,quantity,price from product where id="+id1;
@@ -135,6 +135,24 @@ public class UserModel {
             String query1="select sum(tot_price) from cart where email=?";
             pst = con.prepareStatement(query1);
             pst.setString(1, email);
+            rs = pst.executeQuery();
+            while(rs.next()){
+                sum=rs.getInt(1);
+            }
+            return String.valueOf(sum);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return "0";
+    }
+    public String displayAmount(String id){
+        int sum=0;
+        try{
+            con=DBConnection.getConnection();
+            String query1="select price from product where id=?";
+            pst = con.prepareStatement(query1);
+            pst.setString(1, id);
             rs = pst.executeQuery();
             while(rs.next()){
                 sum=rs.getInt(1);
